@@ -12,16 +12,16 @@
     <link rel="manifest" href="./fav_index/site.webmanifest" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Points per game calculation</title>
+    <link rel="stylesheet" href="./css/style2.css" />
+    <title>Point differential calculation</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script2.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Points per game calculation</span>
+          <span class="mdl-layout-title">Point differential calculation</span>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -29,39 +29,39 @@
           <tr>
             <th>
               <h2>Formula</h2>
-              <h3>PPG = Points / Games</h3>
-              <h3>PPG stands for points per game.</h3>
+              <h3>PD = Points for - Points against</h3>
+              <h3>PD stands for point differential.</h3>
               <img src="./images/Sport_balls.svg.png">
-              <h6>Points per game is a way to calculate how many points a player gets per game. It is an important stat in basketball, but it is also important in any sport where there are points and games. There is lots of basketball on the TV at the moment because the NBA playoffs are aproaching and because March Madness is currently happening, so it would be nice to calculate how many points per game each player gets. Here is a <a href = "./index2.html">link</a> to my second web page which calculates point differential.</a>.</h6>
+              <h6>Points per game is a way to calculate how many points a player gets per game. It is an important stat in basketball, but it is also important in any sport where there are points and games. There is lots of basketball on the TV at the moment because the NBA playoffs are aproaching and because March Madness is currently happening, so it would be nice to calculate how many points per game each player gets. Here is a <a href = "./index.html">link</a> back to my first web page.</a>.</h6>
             </th>
           </tr>
         </table>
         <!-- Simple Textfield -->
         <form action="#">
-          <p>How many points scored?</p>
+          <p>How many points for?</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="points"
+              id="pf"
             />
-            <label class="mdl-textfield__label" for="points">points ...</label>
+            <label class="mdl-textfield__label" for="pf">points for...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
 				
         <!-- Numeric Textfield -->
         <form action="#">
-          <p>How many games played?</p>
+          <p>How many points against?</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="games"
+              id="pa"
             />
-            <label class="mdl-textfield__label" for="games">games ...</label>
+            <label class="mdl-textfield__label" for="pa">points against ...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
@@ -70,12 +70,12 @@
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculate()"
         >
-          Calculate PPG
+          Calculate Point Differential
         </button>
         <br />
         <p>
           <div id="answers">
-            <div id="ppg"></div>
+            <div id="pd"></div>
           </div>
         </p>
       </main>
