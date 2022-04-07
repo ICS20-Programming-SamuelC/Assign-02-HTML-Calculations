@@ -17,5 +17,5 @@ function calculate () {
   const ppg = points / games
 
   // output
-  document.getElementById('ppg').innerHTML = 'This person averages ' + ppg + ' points per game. '
+  document.getElementById('ppg').innerHTML = 'This person averages ' + ppg.toFixed(2) + ' points per game. '
 }
