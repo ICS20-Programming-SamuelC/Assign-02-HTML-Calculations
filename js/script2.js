@@ -10,12 +10,12 @@
  */
 function calculate () {
   // input
-  const points for = parseInt(document.getElementById('pf').value)
-  const points against = parseInt(document.getElementById('pa').value)
+  const pf = parseInt(document.getElementById('pf').value)
+  const pa = parseInt(document.getElementById('pa').value)
 
   // process
   const pd = pf - pa
 
   // output
-  document.getElementById('pd').innerHTML = 'The point differential is ' + ppg + ' . '
+  document.getElementById('pd').innerHTML = 'The point differential is ' + pd + ' . '
 }
